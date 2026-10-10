@@ -15,7 +15,7 @@ link() {
 	local src="$1" dest="$2"
 
 	if [ "$(readlink -f "$dest")" = "$(readlink -f "$src")" ]; then
-		echo "ok      $dest -> $src"
+		echo "linked  $dest -> $src"
 		return
 	fi
 
