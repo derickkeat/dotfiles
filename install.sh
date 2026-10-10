@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
-# Symlink the configs in this repo into place.
+# Install dependencies, then symlink the configs in this repo into place.
 set -euo pipefail
+
+# nvim-treesitter compiles parsers with the tree-sitter CLI
+if ! command -v tree-sitter >/dev/null; then
+	sudo pacman -S --needed tree-sitter-cli
+	echo "installed tree-sitter"
+fi
 
 DOTFILES="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
