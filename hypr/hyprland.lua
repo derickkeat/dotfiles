@@ -1,0 +1,8 @@
+require("env")
+require("programs")
+require("keybinds")
+require("general")
+require("rules")
+require("autostart")
+require("input")
+require("monitors")
