@@ -5,7 +5,7 @@ set -euo pipefail
 pkgs=(
 	# Hyprland and the must-haves from https://wiki.hypr.land/useful-utilities/must-have/
 	hyprland
-	dunst                       # notifications; D-Bus starts it on the first one
+	mako                        # notifications; started in hypr/autostart.lua
 	pipewire wireplumber        # screen sharing; wpctl for the volume keys
 	xdg-desktop-portal-hyprland
 	xdg-desktop-portal-kde      # file picker, which XDPH doesn't implement (see xdg-desktop-portal/)
