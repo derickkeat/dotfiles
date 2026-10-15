@@ -121,3 +121,10 @@ hl.config({
         disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
     },
 })
+
+-- Let XWayland apps render at native resolution instead of being upscaled (blurry) on scaled monitors
+hl.config({
+    xwayland = {
+        force_zero_scaling = true,
+    },
+})
