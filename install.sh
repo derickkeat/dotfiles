@@ -49,3 +49,8 @@ link() {
 link "$DOTFILES/hypr" "$HOME/.config/hypr"
 link "$DOTFILES/nvim" "$HOME/.config/nvim"
 link "$DOTFILES/xdg-desktop-portal" "$HOME/.config/xdg-desktop-portal"
+
+# Private overrides from the dotfiles-personal submodule; a non-recursive clone leaves it empty
+if [ -f "$DOTFILES/dotfiles-personal/install.sh" ]; then
+	source "$DOTFILES/dotfiles-personal/install.sh"
+fi
