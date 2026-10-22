@@ -6,6 +6,7 @@ pkgs=(
 	# Hyprland and the must-haves from https://wiki.hypr.land/useful-utilities/must-have/
 	hyprland
 	mako                        # notifications; started in hypr/autostart.lua
+	quickshell                  # bar; started in hypr/autostart.lua
 	pipewire wireplumber        # screen sharing; wpctl for the volume keys
 	xdg-desktop-portal-hyprland
 	xdg-desktop-portal-kde      # file picker, which XDPH doesn't implement (see xdg-desktop-portal/)
@@ -49,6 +50,7 @@ link() {
 link "$DOTFILES/hypr" "$HOME/.config/hypr"
 link "$DOTFILES/nvim" "$HOME/.config/nvim"
 link "$DOTFILES/xdg-desktop-portal" "$HOME/.config/xdg-desktop-portal"
+link "$DOTFILES/quickshell" "$HOME/.config/quickshell"
 
 # Private overrides from the dotfiles-personal submodule; a non-recursive clone leaves it empty
 if [ -f "$DOTFILES/dotfiles-personal/install.sh" ]; then
