@@ -31,9 +31,20 @@ Scope {
       }
 
       Text {
+        id: clock
         anchors.centerIn: parent
         color: Theme.text
         text: Time.time
+      }
+
+      Text {
+        anchors {
+          left: clock.right
+          verticalCenter: parent.verticalCenter
+          leftMargin: 16
+        }
+        color: Theme.text
+        text: `CPU ${SystemUsage.cpu}%  RAM ${SystemUsage.ram}%`
       }
     }
   }
