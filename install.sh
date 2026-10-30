@@ -19,6 +19,8 @@ pkgs=(
 	hyprshutdown                    # SUPER + M
 	brightnessctl playerctl         # media keys in keybinds.lua (wpctl comes with wireplumber)
 
+	neovim tmux
+
 	# nvim-treesitter compiles parsers with the tree-sitter CLI
 	tree-sitter-cli
 )
