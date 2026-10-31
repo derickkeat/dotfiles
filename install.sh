@@ -20,6 +20,7 @@ pkgs=(
 	# Programs hypr/ launches
 	ghostty nautilus hyprlauncher   # programs.lua
 	hyprshutdown                    # SUPER + M
+	hyprshot                        # SUPER + S and SUPER + SHIFT + S
 	brightnessctl playerctl         # media keys in keybinds.lua (wpctl comes with wireplumber)
 
 	firefox
