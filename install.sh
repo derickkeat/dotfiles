@@ -8,6 +8,9 @@ pkgs=(
 	mako                        # notifications; started in hypr/autostart.lua
 	quickshell                  # bar; started in hypr/autostart.lua
 	pipewire wireplumber        # screen sharing; wpctl for the volume keys
+	pipewire-audio              # sound card support, which pipewire lacks on its own
+	pipewire-pulse pipewire-alsa
+	pipewire-jack               # ffmpeg needs a JACK provider; pacman would otherwise offer jack2
 	xdg-desktop-portal-hyprland
 	xdg-desktop-portal-gtk      # file picker, which XDPH doesn't implement
 	hyprpolkitagent
@@ -19,12 +22,15 @@ pkgs=(
 	hyprshutdown                    # SUPER + M
 	brightnessctl playerctl         # media keys in keybinds.lua (wpctl comes with wireplumber)
 
-	neovim tmux
+	firefox
+	git less
+	neovim ripgrep
+	tmux
 
-	# nvim-treesitter compiles parsers with the tree-sitter CLI
-	tree-sitter-cli
+	# nvim-treesitter compiles parsers with the tree-sitter CLI, using base-devel's C compiler
+	tree-sitter-cli base-devel
 )
-sudo pacman -S --needed "${pkgs[@]}"
+sudo pacman -Syu --needed "${pkgs[@]}"
 
 DOTFILES="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
